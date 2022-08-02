@@ -1,0 +1,423 @@
+body {
+    background: #111111;
+    color: #fff;
+    
+}
+.container{
+    max-width: 1685px;
+    margin: 0 auto;
+}
+/* Header */
+.header__logo{
+    margin-top: 48px;
+}
+
+/* Main Screen */
+.main-screen__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-screen__text-title{
+    font-family: 'Proxima Nova Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 117px;
+    max-width: 721px;
+    text-transform: uppercase;
+}
+.main-screen__text-subtitle{
+    font-family: 'Proxima Nova Regular';
+    max-width: 576px;
+    font-size: 20px;
+    line-height: 24px;
+    position: relative;
+    padding-left: 106px;
+}
+.main-screen__text-subtitle::before{
+    position: absolute;
+    width: 96px;
+    height: 2px;
+    background: #C4C4C4;
+    left: 0;
+    top: 11px;
+    display: block;
+    content: "";
+}
+
+/* Advantages */
+.advantages{
+    margin-top: 96px;
+    margin-bottom: 128px;
+}
+.page-title{
+    font-size: 64px;
+    line-height: 78px;
+    font-family: 'Proxima Nova Semibold'
+}
+.advantages__wraper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.advantages__item{
+    font-size: 36px;
+    line-height: 1.6;
+    max-width: 510px;
+    position: relative;
+    padding-left: 35px;
+    font-family: 'Proxima Nova Semibold'
+
+}
+.advantages__item::before{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    left: 0;
+    top: 17px;
+    
+    display: block;
+    content: "";
+}
+
+/* assembly */
+
+.assembly{
+    padding-bottom: 88px;
+}
+.assembly__item{
+    margin-top: 96px;
+    max-width: 512px;
+}
+.assembly__item-name{
+    font-family: 'Proxima Nova Semibold';
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 44px;
+    padding-bottom: 36px;
+    border-bottom: 2px solid #fff;
+}
+.assembly__item-img{
+    margin:36px 0;
+    text-align: center;
+}
+.assembly__item-description{
+    font-size: 24px;
+    line-height: 120%;
+    font-family: 'Proxima Nova Regular';
+}
+.assembly__item-characteristics{
+    font-family: 'Proxima Nova Semibold';
+    font-size: 24px;
+    line-height: 120%;
+    margin:36px 0;
+}
+.btn {
+    font-size: 32px;
+    transition: all .5s linear;
+    line-height: 120%;
+    padding:16px 80px 16px 32px; 
+    background: #3E74FF;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+}
+.btn:hover{
+    background: #fff;
+}
+.btn:hover a {
+    color: #3E74FF;
+}
+.btn:hover::after{
+    border-top: 4px solid #3E74FF;
+    border-right: 4px solid #3E74FF;
+}
+.btn:hover::before{
+    background-color: #3E74FF;
+}
+.btn::after{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    content: "";
+    right: 50px;
+    top: 35%;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+}
+.btn::before{
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    content: "";
+    top: 36px;
+    transform: rotate(-45deg);
+    right: 50px;
+    background-color: #fff;
+    
+}
+.assembly__item-footer{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    
+}
+.assembly__item-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.assembly__item-newprice{
+    font-size: 36px;
+    font-family: 'Proxima Nova Semibold';
+    line-height: 120%;
+}
+.assembly__item-prevprice{
+    font-size: 16px;
+    font-family: 'Proxima Nova Semibold';
+line-height: 120%;
+color: rgba(255, 255, 255, 0.5);
+text-align: right;
+letter-spacing: 0.005em;
+text-decoration-line: line-through;
+}
+.assembly__characteristics-full__NOVASTRATOS, .assembly__characteristics-full__DARK, .assembly__characteristics-full__NEBULA{
+    transition: all 0.5s linear;
+   opacity: 0;
+   z-index: -1000;
+   display: none;
+   position: absolute;
+   right: -90%;
+   bottom: -300px;
+   width: 576px;
+   font-family: 'Proxima Nova Regular';
+   background: #fff;
+   color: #000;
+   padding: 32px;
+}
+.assembly__characteristics-full__NOVASTRATOS span, .assembly__characteristics-full__DARK span, .assembly__characteristics-full__NEBULA span{
+    font-family: 'Proxima Nova Semibold';
+}
+.assembly__characteristics-full__NOVASTRATOS:after, .assembly__characteristics-full__DARK:after, .assembly__characteristics-full__NEBULA:after{
+    content: ''; 
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border: 10px solid transparent; 
+    border-bottom: 10px solid #fff; 
+}
+.assembly__characteristics--NOVASTRATOS{
+    cursor: pointer;
+}
+.assembly_char{
+    position: relative;
+    cursor: pointer;
+}
+.assembly_char--stratos:hover .assembly__characteristics-full__NOVASTRATOS{
+    z-index: 1000;
+    display: block;
+    opacity: 1;
+}
+
+.assembly_char--dark:hover .assembly__characteristics-full__DARK{
+   z-index: 1000;
+   display: block;
+    opacity: 1;
+}
+.assembly_char--nebula:hover .assembly__characteristics-full__NEBULA{
+   z-index: 1000;
+   display: block;
+    opacity: 1;
+}
+.assembly__list{
+    display: flex;
+    justify-content: space-between;
+}
+.assembly__characteristics-full__NEBULA{
+    
+    left: -300px;
+}
+.assembly__characteristics-full__NEBULA:after{
+    left:97%;
+}
+
+/* footer */
+
+footer{
+    background: #3E74FF;
+   
+}
+.footer__text{
+    padding-top: 76px;
+    padding-bottom: 56px;
+}
+.footer__text-title{
+    font-size: 64px;
+    line-height: 78px;
+    font-family: 'Proxima Nova Bold';
+}
+.footer__text-info{
+    max-width: 660px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+.footer__text-info-item{
+    font-size: 32px;
+    line-height: 39px;
+    font-family: 'Proxima Nova Semibold'
+}
+.footer__under{
+    width: 100%;
+    background: #000;
+}
+.footer__under-text {
+    padding: 16px 0 8px 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+
+/* media */
+
+@media (max-width:1685px) {
+    .main-screen__wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .assembly__list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .assembly__characteristics-full__NOVASTRATOS, .assembly__characteristics-full__DARK, .assembly__characteristics-full__NEBULA{
+        right: -18% ;
+    bottom: -351px ;
+    left: 0;
+    
+    }
+    .footer__text{
+        padding-left: 30px;
+    }
+    .footer__under-text{
+        padding-left: 30px;
+    }
+    .main-screen__logo{
+        margin-top: 30px;
+    }
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 940px){
+    .advantages__wraper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-screen__logo img{
+        max-width: 600px;
+    }
+    .main-screen__text-title{
+        font-size: 75px;
+        line-height: 95px;
+    }
+    .advantages__logo{
+        margin-top: 30px;
+    }
+}
+@media(max-width: 640px) {
+    .main-screen__text-title{
+        font-size: 32px;
+        line-height: 39px;
+    }
+    .main-screen__text-subtitle{
+        font-size: 11px;
+        line-height: 13px;
+    }
+    .main-screen__logo img {
+        max-width: 300px;
+    }
+    .page-title{
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .advantages__item{
+        font-size: 19px;
+        line-height: 1.5;
+    }
+    .advantages__item::before{
+        width: 16px;
+        height: 16px;
+        top: 6px;
+        
+    }
+    .advantages__logo{
+        text-align: center;
+    }
+    .advantages__logo img {
+        max-width: 200px;
+    }
+    .assembly__item-name{
+        font-size: 16px;
+line-height: 19px;
+    }
+    .assembly__item{
+        max-width: 340px;
+    }
+    .assembly__item-img img{
+        max-width: 250px;
+    }
+    .assembly__item-description{
+        font-size: 11px;
+        line-height: 120%;
+    }
+    .assembly__item-characteristics{
+        font-size: 16px;
+    }
+    .btn{
+        padding: 8px 36px 8px 16px;
+        font-size: 20px;
+    }
+    .assembly__item-newprice{
+        font-size: 25px;
+    }
+    .btn::before {
+        width: 17px;
+        height: 3px;
+        top: 24px;
+        right: 5px;
+       
+    }
+    .btn::after {
+      
+      
+        right: 4px;
+        top: 34%;
+        border-top: 3px solid #fff;
+        border-right: 3px solid #fff;
+    }
+    .assembly__characteristics-full__NOVASTRATOS, .assembly__characteristics-full__DARK, .assembly__characteristics-full__NEBULA {
+        width: 290px;
+        padding: 25px;
+        height: 300px;
+        bottom: -364px;
+    }
+    .assembly__characteristics-full__NOVASTRATOS:after, .assembly__characteristics-full__DARK:after, .assembly__characteristics-full__NEBULA:after{
+        top: -20px;
+        left: 215px;
+    }
+    .footer__text-title{
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .footer__text-info-item{
+        font-size: 11px;
+    line-height: 13px;
+    }
+}
